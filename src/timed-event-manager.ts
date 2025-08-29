@@ -356,11 +356,12 @@ const timedEvents: TimedEvent[] = [
     name: "Pride 25",
     eventType: EventType.SHINY,
     startDate: new Date(Date.UTC(2025, 5, 18)),
-    endDate: new Date(Date.UTC(2025, 5, 30)),
+    endDate: new Date(Date.UTC(2025, 12, 30)),
     bannerKey: "pride2025",
     scale: 0.105,
     availableLangs: ["en", "de", "it", "fr", "ja", "ko", "es-ES", "es-MX", "pt-BR", "zh-CN", "zh-TW"],
     shinyMultiplier: 2,
+    upgradeUnlockedVouchers: true,
     eventEncounters: [
       { species: SpeciesId.CHARMANDER },
       { species: SpeciesId.SANDILE },
@@ -376,6 +377,7 @@ const timedEvents: TimedEvent[] = [
       { species: SpeciesId.ALOLA_MEOWTH },
     ],
     classicWaveRewards: [
+      { wave: 1, type: "MAP" },
       { wave: 8, type: "SHINY_CHARM" },
       { wave: 8, type: "ABILITY_CHARM" },
       { wave: 8, type: "CATCHING_CHARM" },
