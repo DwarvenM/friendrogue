@@ -28,11 +28,11 @@ export const EGG_PITY_EPIC_THRESHOLD = 59;
 export const EGG_PITY_RARE_THRESHOLD = 9;
 
 // Waves to hatch an egg of a given tier
-export const HATCH_WAVES_COMMON_EGG = 10;
-export const HATCH_WAVES_RARE_EGG = 25;
-export const HATCH_WAVES_EPIC_EGG = 50;
-export const HATCH_WAVES_LEGENDARY_EGG = 100;
-export const HATCH_WAVES_MANAPHY_EGG = 50;
+export const HATCH_WAVES_COMMON_EGG = 1;
+export const HATCH_WAVES_RARE_EGG = 1;
+export const HATCH_WAVES_EPIC_EGG = 1;
+export const HATCH_WAVES_LEGENDARY_EGG = 1;
+export const HATCH_WAVES_MANAPHY_EGG = 1;
 
 // Rates for specific random properties in 1/x
 export const GACHA_DEFAULT_SHINY_RATE = 128;
