@@ -76,7 +76,7 @@ export const WEIGHT_INCREMENT_ON_SPAWN_MISS = 3;
  * Specifies the target average for total ME spawns in a single Classic run.
  * Used by anti-variance mechanic to check whether a run is above or below the target on a given wave.
  */
-export const AVERAGE_ENCOUNTERS_PER_RUN_TARGET = 12;
+export const AVERAGE_ENCOUNTERS_PER_RUN_TARGET = 17;
 
 /**
  * Will increase/decrease the chance of spawning a ME based on the current run's total MEs encountered vs AVERAGE_ENCOUNTERS_PER_RUN_TARGET
