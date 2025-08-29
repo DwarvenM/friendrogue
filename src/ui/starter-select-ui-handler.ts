@@ -1761,7 +1761,7 @@ export class StarterSelectUiHandler extends MessageUiHandler {
             );
             const isCaught = this.getSpeciesData(species.speciesId).dexEntry.caughtAttr;
             return (
-              !isDupe && isValidForChallenge && currentPartyValue + starterCost <= this.getValueLimit() && isCaught
+                isValidForChallenge && currentPartyValue + starterCost <= this.getValueLimit() && isCaught
             );
           });
           if (validStarters.length === 0) {
@@ -1860,7 +1860,8 @@ export class StarterSelectUiHandler extends MessageUiHandler {
           const ui = this.getUi();
           let options: any[] = []; // TODO: add proper type
 
-          const [isDupe, removeIndex]: [boolean, number] = this.isInParty(this.lastSpecies);
+          const removeIndex = this.starterSpecies.indexOf(this.lastSpecies);
+          //const [isDupe, removeIndex]: [boolean, number] = this.isInParty(this.lastSpecies);
 
           const isPartyValid = this.isPartyValid();
           const isValidForChallenge = checkStarterValidForChallenge(
@@ -1881,7 +1882,7 @@ export class StarterSelectUiHandler extends MessageUiHandler {
             );
           const newCost = globalScene.gameData.getSpeciesStarterValue(this.lastSpecies.speciesId);
           if (
-            !isDupe &&
+      
             isValidForChallenge &&
             currentPartyValue + newCost <= this.getValueLimit() &&
             this.starterSpecies.length < PLAYER_PARTY_MAX_SIZE
@@ -1895,7 +1896,7 @@ export class StarterSelectUiHandler extends MessageUiHandler {
                     globalScene.gameData.getSpeciesStarterValue(this.lastSpecies.speciesId),
                     true,
                   );
-                  if (!isDupe && isValidForChallenge && isOverValueLimit) {
+                  if (isValidForChallenge && isOverValueLimit) {
                     this.starterCursorObjs[this.starterSpecies.length]
                       .setVisible(true)
                       .setPosition(this.cursorObj.x, this.cursorObj.y);
