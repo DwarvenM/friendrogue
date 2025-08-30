@@ -377,7 +377,7 @@ const timedEvents: TimedEvent[] = [
       { species: SpeciesId.ALOLA_MEOWTH },
     ],
     classicWaveRewards: [
-      { wave: 1, type: "MAP" },
+      { wave: 8, type: "MAP" },
       { wave: 8, type: "SHINY_CHARM" },
       { wave: 8, type: "ABILITY_CHARM" },
       { wave: 8, type: "CATCHING_CHARM" },
