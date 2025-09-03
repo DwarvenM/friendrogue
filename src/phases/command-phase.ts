@@ -401,19 +401,12 @@ export class CommandPhase extends FieldPhase {
       gameData.getStarterCount(d => !!d.caughtAttr) < Object.keys(speciesStarterCosts).length - 1;
 
     if (biomeType === BiomeId.END && battleType === BattleType.WILD) {
-      if (
-        (isClassic && !isClassicFinalBoss && someUncaughtSpeciesOnField) ||
-        (isFullFreshStart && !isClassicFinalBoss) ||
-        (isEndless && !isEndlessMinorBoss)
-      ) {
-        // Uncatchable paradox mons in classic and endless
-        this.queueShowText("battle:noPokeballForce");
-      } else if (
+       if (
         (isClassic && isClassicFinalBoss && missingMultipleStarters) ||
         (isFullFreshStart && isClassicFinalBoss) ||
         (isEndless && isEndlessMinorBoss) ||
         isDaily
-      ) {
+       ) {
         // Uncatchable final boss in classic, endless and daily
         this.queueShowText("battle:noPokeballForceFinalBoss");
       } else {
